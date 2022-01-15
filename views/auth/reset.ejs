@@ -12,11 +12,11 @@
         <% } %>
         <form class="login-form" action="/reset" method="POST">
             <div class="form-control">
-                <label for="email">Correo</label>
+                <label for="email">E-Mail</label>
                 <input type="email" name="email" id="email">
             </div>
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-            <button class="btn" type="submit">Resetear Contraseña</button>
+            <button class="btn" type="submit">Reset Password</button>
         </form>
     </main>
 <%- include('../includes/end.ejs') %>

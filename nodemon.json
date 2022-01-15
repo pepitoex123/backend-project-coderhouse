@@ -1,0 +1,8 @@
+{
+    "env": {
+        "MONGO_USER": "pepitoex",
+        "MONGO_PASSWORD": "hola123456",
+        "MONGO_DEFAULT_DATABASE": "ecommerce_db",
+        "STRIPE_KEY": "pk_test_51JfoOHLZrKJPrb6PfIlfRLYwFjVKHvQv4aJZBSKtwDrsi3U8j6J83bwcIY9NV9C3iGJ8v4YANuqkHN5cOVVeqqDU00A1uSERFn"
+    }
+}
