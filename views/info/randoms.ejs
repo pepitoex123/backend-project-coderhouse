@@ -1,0 +1,16 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+<%- include('../includes/navigation.ejs') %>
+
+<main>
+    <% if (cant) { %>
+        <div>
+            <h1>Calculating..., check console!</h1>
+        </div>
+    <% } else { %>
+        <h1>No variable cant found... calculating 100.000, check console!</h1>
+    <% } %>
+</main>
+<%- include('../includes/end.ejs') %>

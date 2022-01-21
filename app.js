@@ -60,6 +60,7 @@ app.set('views', 'views');
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 const authRoutes = require('./routes/auth');
+const apiRoutes = require("./routes/api-info");
 
 const accessLogStream = fs.createWriteStream(
   path.join(__dirname, 'access.log'),
@@ -121,6 +122,7 @@ app.use((req, res, next) => {
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 app.use(authRoutes);
+app.use("/api",apiRoutes);
 
 app.get('/500', errorController.get500);
 
@@ -129,6 +131,7 @@ app.use(errorController.get404);
 app.use((error, req, res, next) => {
   // res.status(error.httpStatusCode).render(...);
   // res.redirect('/500');
+  console.log("The error is ", error);
   res.status(500).render('500', {
     pageTitle: 'Error!',
     path: '/500',
@@ -142,7 +145,7 @@ mongoose
     // https
     //   .createServer({ key: privateKey, cert: certificate }, app)
     //   .listen(process.env.PORT || 3000);
-      app.listen(process.env.PORT || 3000);
+      app.listen(process.env.PORT || 8080);
   })
   .catch(err => {
     console.log(err);
